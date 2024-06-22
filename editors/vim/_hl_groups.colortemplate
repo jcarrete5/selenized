@@ -16,6 +16,7 @@ Normal               fg_0          bg_0
 # selections and highlights
 IncSearch            orange        none          reverse
 Search               yellow        none          reverse
+CurSearch         -> Search
 QuickFixLine      -> Search
 Visual               none          bg_2
 MatchParen           br_yellow     bg_2          bold
@@ -38,6 +39,9 @@ StatusLine           none          none          reverse
 StatusLineNC         none          bg_2
 StatusLineTerm    -> StatusLine
 StatusLineTermNC  -> StatusLineNC
+NormalFloat          none          bg_1
+WinBar               fg_1          bg_1          bold
+WinBarNC             fg_1          bg_1          bold
 
 # bars on the top
 TabLineSel           fg_1          bg_1          reverse bold
@@ -57,6 +61,9 @@ DiffAdd              green         bg_1
 DiffChange           none          bg_1
 DiffDelete           red           bg_1
 DiffText             bg_1          yellow
+Added             -> DiffAdd
+Changed           -> DiffChange
+Removed           -> DiffDelete
 
 # diagnostics
 DiagnosticError      red           bg_1
@@ -70,6 +77,26 @@ DiagnosticUnderlineInfo       fg_0   bg_0   guisp=br_blue underline
 DiagnosticUnderlineHint       fg_0   bg_0   guisp=dim_0 underline
 DiagnosticUnderlineOk         fg_0   bg_0   guisp=br_green underline
 DiagnosticDeprecated          fg_0   bg_0   guisp=red strikethrough
+
+# treesitter
+@conditional      -> Conditional
+@define           -> Define
+@diff.delta       -> DiffChange
+@diff.minus       -> DiffDelete
+@diff.plus        -> DiffAdd
+@include          -> Include
+@preproc          -> PreProc
+@repeat           -> Statement
+@storageclass     -> StorageClass
+@variable         -> Identifier
+@exception        -> Exception
+
+# misc
+RedrawDebugClear       none  br_yellow  reverse
+RedrawDebugComposed    none  br_green   reverse
+RedrawDebugRecompose   none  br_red     reverse
+FloatShadow            none  bg_1
+FloatShadowThrough     none  bg_1
 
 # }}}
 
