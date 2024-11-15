@@ -78,6 +78,8 @@ DiagnosticUnderlineHint       fg_0   bg_0   guisp=dim_0 underline
 DiagnosticUnderlineOk         fg_0   bg_0   guisp=br_green underline
 DiagnosticDeprecated          fg_0   bg_0   guisp=red strikethrough
 
+LspInlayHint                  dim_0  none
+
 # treesitter
 @conditional      -> Conditional
 @define           -> Define
